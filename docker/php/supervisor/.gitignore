@@ -1,0 +1,5 @@
+supervisor.log
+supervisor.pid
+supervisor.sock
+worker.log*
+horizon.log
