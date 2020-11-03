@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace Bunker\Application\Entity;
 
-use App\Repository\UserRepository;
+use Bunker\Application\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 

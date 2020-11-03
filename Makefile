@@ -10,7 +10,7 @@ up:
 	docker-compose up -d
 rebuild: build composer migrate fixture-append migrate-postgis api-doc
 
-init: prune build composer migrate fixture-append migrate-postgis
+init: prune build composer migrate fixture-append
 
 composer:
 	docker-compose exec php composer install

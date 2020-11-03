@@ -55,12 +55,14 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Bunker\\Application\\": "src/Application",
+            "Bunker\\Domain\\": "src/Domain"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "Bunker\\Tests\\": "tests/"
         }
     },
     "replace": {
