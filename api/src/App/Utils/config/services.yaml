@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    WebOffice\App\Utils\EnvChecker:
+        class: WebOffice\App\Utils\EnvChecker
+        arguments:
+            - '%app_env%'
