@@ -1,0 +1,42 @@
+parameters:
+    app_env: '%env(APP_ENV)%'
+    app_secret: '%env(APP_SECRET)%'
+
+    default_locale: '%env(APP_DEFAULT_LOCALE)%'
+    available_locales:
+        - ru
+        - ua
+        - en
+
+    default_pagination_limit: '%env(int:API_PAGINATION_LIMIT)%'
+
+    allow_origin: '%env(CORS_ALLOW_ORIGIN)%'
+
+    secret_key: '%env(resolve:JWT_SECRET_KEY)%'
+    public_key: '%env(resolve:JWT_PUBLIC_KEY)%'
+    pass_phrase: '%env(JWT_PASSPHRASE)%'
+    token_ttl: '%env(JWT_TOKEN_TTL)%'
+
+    auth_code_generator_begin: '%env(APP_RANDOM_GENERATOR_BEGIN)%'
+    auth_code_generator_end: '%env(APP_RANDOM_GENERATOR_END)%'
+    auth_code_lifetime: '%env(APP_AUTH_CODE_LIFETIME)%'
+    auth_code_time_between: '%env(APP_AUTH_CODE_TIME_BETWEEN)%'
+    auth_code_max_per_day: '%env(APP_AUTH_CODE_MAX_PER_DAY)%'
+    auth_code_max_retries: '%env(APP_AUTH_CODE_MAX_RETRIES)%'
+
+    database_main_url: '%env(resolve:DATABASE_URL)%'
+    database_postgis_url: '%env(resolve:DATABASE_POSTGIS_URL)%'
+
+    redis_url: '%env(REDIS_URL)%'
+    rabbitmq_url: '%env(RABBITMQ_URL)%'
+    rabbitmq_idle_timeout: '%env(RABBITMQ_DEFAULT_IDLE_TIMEOUT)%'
+
+    sms_transport: '%env(APP_SMS_TRANSPORT)%'
+    turbosms_wsdl_url: '%env(APP_TURBOSMS_WSDL_URL)%'
+    turbosms_login: '%env(APP_TURBOSMS_LOGIN)%'
+    turbosms_password: '%env(APP_TURBOSMS_PASSWORD)%'
+    turbosms_sender_name: '%env(APP_TURBOSMS_SENDER_NAME)%'
+
+    parse_catalog_base_url: '%env(PARSER_BASE_URL)%'
+    open_data_base_url: '%env(OPEN_DATA_URL)%'
+    open_data_api_key: '%env(OPEN_DATA_API_KEY)%'

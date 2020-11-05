@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    WebOffice\App\EventListener\ExceptionResponseHandlerListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: format }

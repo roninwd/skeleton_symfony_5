@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    WebOffice\App\Service\Response\Contracts\ErrorResponseFormatterInterface:
+        class: WebOffice\App\Service\Response\Json\ErrorResponseFormatter
+
+    WebOffice\App\Service\Response\Contracts\SuccessResponseFormatterInterface:
+        class: WebOffice\App\Service\Response\Json\SuccessResponseFormatter
