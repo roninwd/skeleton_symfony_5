@@ -6,3 +6,10 @@ services:
     WebOffice\App\EventListener\ExceptionResponseHandlerListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception, method: format }
+
+    WebOffice\App\EventListener\SetterDefaultLocaleListener:
+        properties:
+            defaultLanguage: '%kernel.default_locale%'
+            translator: '@translator'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: setLocale }
